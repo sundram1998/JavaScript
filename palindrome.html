@@ -1,3 +1,10 @@
 <script>
-  const isPalindrome = function () {};
+  const isPalindrome = function () {
+    const num = parseInt(prompt("Enter the number"));
+    const rev = parseInt(num.toString().split("").reverse().join(""));
+    console.log(num);
+    console.log(rev);
+    return rev === num;
+  };
+  console.log(isPalindrome());
 </script>
