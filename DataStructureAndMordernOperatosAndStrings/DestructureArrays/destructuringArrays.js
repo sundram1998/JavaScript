@@ -25,3 +25,8 @@ console.log(main, secondary);
 console.log(restaurent.order(2, 0));
 const [starterMenu, mainCourse] = restaurent.order(2, 0);
 console.log([starterMenu, mainCourse]);
+
+//Nested Destructuring
+const arr = [2, 4, [3, 4]];
+const [x, , [y, z]] = arr;
+console.log(x, y, z);
