@@ -1,0 +1,21 @@
+<script>
+  //   console.log(8 + "8");
+  // console.log(8 + "8" + 8);
+  // console.log(8 + 8 + "8");
+  // console.log(8 + +7);
+  const age = 18;
+  const myPromise = new Promise((sucess, reject) => {
+    if (age >= 18) {
+      sucess("return result");
+    } else {
+      reject("return error message");
+    }
+  });
+  myPromise
+    .then((message) => {
+      console.log("This is in then: " + message);
+    })
+    .catch((message) => {
+      console.log("This is in catch: " + message);
+    });
+</script>
