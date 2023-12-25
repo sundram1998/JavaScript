@@ -4,7 +4,7 @@ const age = function (dob) {
   return currentYear - dob;
 };
 
-const person = function (age) {
+const person = (age) => {
   if (age > 18) {
     console.log("You are an adult");
   }
