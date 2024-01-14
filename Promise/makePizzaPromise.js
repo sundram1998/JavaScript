@@ -26,18 +26,18 @@ function makePizza(dough) {
   });
 }
 
-// getCheese()
-//   .then((cheese) => {
-//     console.log(`Here is your ${cheese}`);
-//     return getDough(cheese);
-//   })
-//   .then((dough) => {
-//     console.log(`Here is your ${dough}`);
-//     return makePizza(dough);
-//   })
-//   .then((pizza) => {
-//     console.log(`Here is your ${pizza}`);
-//   });
+getCheese()
+  .then((cheese) => {
+    console.log(`Here is your ${cheese}`);
+    return getDough(cheese);
+  })
+  .then((dough) => {
+    console.log(`Here is your ${dough}`);
+    return makePizza(dough);
+  })
+  .then((pizza) => {
+    console.log(`Here is your ${pizza}`);
+  });
 
 async function bakePizza() {
   const cheese = await getCheese();

@@ -1,0 +1,25 @@
+<script>
+  "use strict";
+  function myPromiseFunction() {
+    console.log("This is synchronous operation and will print immediately");
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log(
+          "This is Asynchronous operation and will take 3 sec to print"
+        );
+      }, 3000);
+    });
+  }
+  //   myPromiseFunction()
+  //     .then((result) => {
+  //       console.log(result);
+  //     })
+  //     .catch((result) => {
+  //       console.log(result);
+  //     });
+
+  async function logSynAndAsync() {
+    console.log(myPromiseFunction());
+  }
+  logSynAndAsync();
+</script>
