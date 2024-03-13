@@ -1,0 +1,16 @@
+<script>
+  "use strict";
+  function removeDuplicates(nums) {
+    console.log(nums.length);
+    return [...new Set(nums)];
+  }
+  console.log(removeDuplicates([23, 2, 23, 24, 2, 25, 65, 43, 43, 2]));
+  // Using filter method
+  function usingFilter(nums) {
+    let uniqueNums = nums.filter((val, i) => {
+      return nums.indexOf(val) === i;
+    });
+    return uniqueNums;
+  }
+  console.log(usingFilter([23, 2, 23, 24, 2, 25, 65, 43, 43, 2]));
+</script>

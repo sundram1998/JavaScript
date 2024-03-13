@@ -1,0 +1,11 @@
+<script>
+  "use strict";
+  function isAnagram(str1, str2) {
+    if (str1.length != str2.length) return false;
+    let string1 = str1.split("").sort().join("");
+    let string2 = str2.split("").sort().join("");
+    return string1 === string2;
+  }
+  console.log(isAnagram("listen", "silent")); // Output: true
+  console.log(isAnagram("hello", "world"));
+</script>

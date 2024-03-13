@@ -1,0 +1,14 @@
+<script>
+  "use strict";
+  const cutPieces = function (fruit) {
+    return fruit * 4;
+  };
+
+  const fruitProcessor = (apples, oranges) => {
+    const applePeices = cutPieces(apples);
+    const orangePieces = cutPieces(oranges);
+    const juice = `juice with ${applePeices} of apple and ${orangePieces} pieces of orange`;
+    return juice;
+  };
+  console.log(fruitProcessor(2, 4));
+</script>
