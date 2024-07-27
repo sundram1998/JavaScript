@@ -1,0 +1,29 @@
+<script>
+  // "use strict";
+  // let arr = [2, 3, 4, 5, 6, 8, 7];
+  // // find largest value
+  // let max = arr.reduce((accumulator, value) => {
+  //   if (accumulator > value) {
+  //     return accumulator;
+  //   } else {
+  //     return value;
+  //   }
+  // });
+  // console.log(max);
+
+  // //find sum of all numbers
+  // let sum = arr.reduce((accumulator, value) => {
+  //   return accumulator + value;
+  // });
+  // console.log(sum);
+
+  function greet(name) {
+    console.log("Hello " + name);
+  }
+
+  function takeUserName(callback) {
+    let name = "Sundaram";
+    callback(name);
+  }
+  console.log(takeUserName(greet));
+</script>

@@ -1,0 +1,29 @@
+<script>
+  "use strict";
+  // let str = "sundaramms";
+  let dups = function (str) {
+    const charCount = {};
+    const dup = [];
+    for (let char of str) {
+      charCount[char] = (charCount[char] || 0) + 1;
+    }
+
+    for (let char in charCount) {
+      if (charCount[char] > 1) {
+        dup.push(char);
+      }
+    }
+    return dup;
+  };
+  console.log(dups("sundaramms"));
+  let str = "sundramamd";
+  let strArr = str.split("");
+  let dupInStr = strArr.filter((value, index) => str.indexOf(value) != index);
+  console.log(dupInStr);
+
+  const arr = ["sk", "vk", "ck", "sk", "dk", "vk"];
+  let dupElement = arr.filter((value, index) => {
+    return arr.indexOf(value) != index;
+  });
+  console.log(dupElement);
+</script>

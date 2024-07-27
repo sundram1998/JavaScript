@@ -1,0 +1,16 @@
+<script>
+  const people = [
+    { name: "Alice", age: 30 },
+    { name: "Bob", age: 25 },
+    { name: "Charlie", age: 42 },
+    { name: "Diana", age: 8 },
+    { name: "Ethan", age: 65 },
+  ];
+
+  let adults = people.filter((value) => {
+    return value.age >= 18;
+  });
+  let even = people.filter((value) => value.age % 2 == 0);
+  console.log(adults);
+  console.log(even);
+</script>

@@ -1,0 +1,60 @@
+<script>
+  let p = new Promise((resolve, reject) => {
+    a = 1 + 4;
+    if (a == 2) {
+      resolve("The Promise is resolved!!");
+    } else {
+      reject("The Promise is rejected!!");
+    }
+  });
+  p.then((message) => {
+    console.log(message);
+  }).catch((error) => {
+    console.log(error);
+  });
+
+  let asyncFunction = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        a = 1 + 1;
+        if (a == 2) {
+          resolve("The Promise is resolved!!,After Two seconds");
+        } else {
+          reject("The Promise is rejected!!");
+        }
+      }, 1000);
+    });
+  };
+  asyncFunction()
+    .then((success) => {
+      console.log(success);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  // Using async and await
+  async function useAsyncAwait() {
+    return await new Promise((resolve, reject) => {
+      let a = 1 + 1;
+      if (a === 2) {
+        resolve("Promise is resolved!,This is in async");
+      } else {
+        reject("Promise is rejected!!,This is in async");
+      }
+    });
+  }
+  useAsyncAwait()
+    .then((success) => {
+      console.log(success);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  async function asyncFunction() {
+    const result = await somePromiseReturningFunction();
+    return result;
+  }
+  console.log(asyncFunction);
+</script>

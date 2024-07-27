@@ -1,0 +1,19 @@
+<script>
+  // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // // Get even number from the array
+  // const evenNumbers = numbers.filter((num) => num % 2 === 0);
+  // console.log(evenNumbers);
+
+  const duplicates = [1, 2, 3, 5, 4, 2, 3, 5, 4, 6, 7, 8];
+  // Remove Duplicates
+  // const singleValues = duplicates.filter((value, index, arr) => {
+  //   return arr.indexOf(value) === index;
+  // });
+  // console.log(singleValues);
+
+  // To find duplicates
+  const duplicatesInArray = duplicates.filter((value, index, arr) => {
+    return arr.indexOf(value) != index;
+  });
+  console.log(duplicatesInArray);
+</script>

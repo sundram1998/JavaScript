@@ -1,0 +1,47 @@
+<script>
+  "use strict";
+  let arr = [1, 2, 3, 5, 5, 3, 4, 6, 4];
+  let evens = arr.map((value) => {
+    if (value % 2 == 0) {
+      return value;
+    }
+  });
+  console.log(Math.max(...arr));
+  console.log(evens);
+  //factorial of given number
+  let num = 5;
+  let fact = function (num) {
+    if (num == 1 || num == 0) return 1;
+    return num * fact(num - 1);
+  };
+
+  console.log(fact(5));
+
+  // number of occurences in string
+  let obj = {};
+  let string = "Hello There";
+  for (let x of string) {
+    if (obj[x]) {
+      obj[x] += 1;
+    } else {
+      obj[x] = 1;
+    }
+  }
+  console.log(obj);
+
+  // odd numbers
+  let odds = arr.filter((value) => {
+    if (value % 2 != 0) return value;
+  });
+  console.log(odds);
+
+  // number of vowels in string
+  let vowels = "aeiouAEIOU";
+  let givenString = "hellow there";
+  let count = function () {
+    for (let i of vowels) {
+      if (givenString.includes(i)) console.log(i + " ");
+    }
+  };
+  count();
+</script>

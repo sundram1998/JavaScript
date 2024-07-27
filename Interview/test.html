@@ -1,0 +1,32 @@
+<script>
+  "use strict";
+  let nums = [2, 7, 11, 15];
+  let indices = [];
+  let target = 9;
+  let targetIndexes = function () {
+    for (let i = 0; i < nums.length; i++) {
+      for (let j = 1; j < nums.length; j++) {
+        if (nums[i] + nums[j] === target) {
+          indices.push(i, j);
+          return indices;
+        }
+      }
+    }
+    return -1;
+  };
+  // console.log(targetIndexes());
+
+  let str = "My name is sundaram yadav";
+  let obj = {};
+  let occurence = function () {
+    for (let i of str) {
+      if (obj[i]) {
+        obj[i] += 1;
+      } else {
+        obj[i] = 1;
+      }
+    }
+    return obj;
+  };
+  console.log(occurence());
+</script>

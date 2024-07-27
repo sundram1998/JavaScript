@@ -1,0 +1,55 @@
+<script>
+  let numbers = [1, 2, 3, 4, 5, 6, 7];
+  // slice does not mutate the origional array
+  //   console.log(arr.slice());
+
+  let doubledArr = numbers.map(double);
+  function double(value, index, arr) {
+    return value * 2;
+  }
+  console.log(doubledArr);
+
+  let evenNums = numbers.filter((value) => value % 2 == 0);
+  console.log(evenNums);
+
+  let factorial = function (num) {
+    if (num == 0 || num == 1) return 1;
+    return num * factorial(num - 1);
+  };
+  console.log(factorial(5));
+
+  let isPrime = function (num) {
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) return false;
+    }
+    return true;
+  };
+  console.log(isPrime(4));
+
+  let fibonacciSequence = [0, 1];
+  let fibonacci = function (num) {
+    for (let i = 2; i <= num; i++) {
+      fibonacciSequence[i] =
+        fibonacciSequence[i - 2] + fibonacciSequence[i - 1];
+    }
+    return fibonacciSequence;
+  };
+  console.log(fibonacci(10));
+
+  let largest = 0;
+  let smallest = numbers[0];
+  let largeAndSmall = [];
+  let answer = function () {
+    for (let i of numbers) {
+      if (i > largest) {
+        largest = i;
+      }
+      if (i < smallest) {
+        smallest = i;
+      }
+    }
+    largeAndSmall.push(largest, smallest);
+    return largeAndSmall;
+  };
+  console.log(answer());
+</script>

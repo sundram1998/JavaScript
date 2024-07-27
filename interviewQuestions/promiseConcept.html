@@ -1,0 +1,24 @@
+<script>
+  "use strict";
+  let myPromise = new Promise((resolve, reject) => {
+    let a = 2;
+    if (a > 1) {
+      resolve("a is greater than 1");
+    } else {
+      reject("a is not greater than 1");
+    }
+  });
+  console.log(myPromise);
+
+  let printYourName = function (name) {
+    setTimeout(() => {
+      console.log(`Your name is ${name}`);
+    }, 1000);
+  };
+  console.log(printYourName("Sundaram Yadav"));
+  let calback = function () {
+    printYourName("Sundaram Yadav");
+  };
+  calback();
+  console.log("After CallBack");
+</script>

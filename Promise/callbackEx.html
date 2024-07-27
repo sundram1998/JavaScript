@@ -1,6 +1,11 @@
 <script>
-  let addition = function (a, b) {
-    return a + b;
-  };
-  let avg = () => {};
+  function greet(name) {
+    console.log("Hello " + name);
+  }
+
+  function takeUserInput(callback) {
+    name = "Sundaram";
+    callback(name);
+  }
+  takeUserInput(greet);
 </script>

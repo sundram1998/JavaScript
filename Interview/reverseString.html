@@ -1,0 +1,49 @@
+<script>
+  "use strict";
+  // let findLongest = function (str) {
+  //   const arr = str.split(" ");
+  //   let longest = arr[0];
+  //   for (let i of arr) {
+  //     if (i.length > longest.length) {
+  //       longest = i;
+  //     }
+  //   }
+  //   return longest;
+  // };
+  // // console.log(findLongest("The quick brown fox jumped over the lazy dog"));
+
+  // let vowels = "aeiouAEIOU";
+  // let countVowels = function (str) {
+  //   let count = 0;
+  //   for (let i of str) {
+  //     if (vowels.includes(i)) {
+  //       count++;
+  //     }
+  //   }
+  //   return count;
+  // };
+  // // console.log(countVowels("kjhgfdkdjd"));
+  // function print(numbers) {
+  //   console.log(`There are ${numbers} vowels in given string`);
+  // }
+  // print(countVowels("The quick brown fox jumped over the lazy dog"));
+  // let str = "152sundram@$";
+  // // console.log(str.replace(/[^a-zA-Z]/g, ""));
+
+  let duplicates = function (str) {
+    let obj = {};
+    for (let i of str) {
+      if (obj[i]) {
+        obj[i] += 1;
+      } else {
+        obj[i] = 1;
+      }
+    }
+    return obj;
+  };
+  console.log(
+    duplicates(
+      "The quick brown fox jumped over the lazy dog The quick brown fox jumped over the lazy dog"
+    )
+  );
+</script>

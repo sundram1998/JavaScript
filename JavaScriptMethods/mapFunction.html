@@ -1,0 +1,47 @@
+<script>
+  const arr = [1, 2, 3, 4, 5];
+  // multiply the items
+  const doubleArr = (item) => {
+    return (item = item * 2);
+  };
+  const doubleNumbers = arr.map((item) => item * 2);
+  // console.log(arr.map(doubleArr));
+  console.log(doubleNumbers);
+
+  // multiply with index
+  function multiplyWithIndex(item, index, arr) {
+    return (item = item * index);
+  }
+  console.log(arr.map(multiplyWithIndex));
+  console.log(arr.map((item, index) => item * index));
+
+  // Accessing Index: Explain how to access the index while using map().
+  arr.map((item, index) => console.log(`${item} is at ${index}`));
+
+  // Convert String to upper case for given array of strings
+  const stringArray = ["Hello", "hi", "by", "Good Morning"];
+  const toUpparcase = stringArray.map((index) => index.toUpperCase());
+  console.log(toUpparcase);
+
+  // squar the numbers
+  console.log(arr.map((item) => item * item));
+
+  // Reverse all the string in array
+  console.log(stringArray.map((item) => item.split("").reverse().join("")));
+
+  // Sum of Array elements
+  let sum = 0;
+  function add(items) {
+    return (sum += items);
+  }
+  console.log(arr.map(add));
+
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // Filter out even numbers
+  const evenNumbers = numbers.map((num) => (num = num % 2));
+  const even = numbers.filter((value) => {
+    return value % 2 === 0;
+  });
+
+  console.log(even);
+</script>

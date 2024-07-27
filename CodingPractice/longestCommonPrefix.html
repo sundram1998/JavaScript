@@ -1,0 +1,15 @@
+<script>
+  "use strict";
+  let longest = "";
+  let strArr = ["flower", "flour", "floute"];
+  let strSorted = strArr.sort();
+  let first = strSorted[0];
+  let last = strSorted[strSorted.length - 1];
+  for (let i = 0; i < first.length; i++) {
+    if (first[i] != last[i]) {
+      break;
+    }
+    longest = longest + first[i];
+  }
+  console.log(longest);
+</script>

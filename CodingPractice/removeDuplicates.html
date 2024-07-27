@@ -4,6 +4,7 @@
     console.log(nums.length);
     return [...new Set(nums)];
   }
+
   console.log(removeDuplicates([23, 2, 23, 24, 2, 25, 65, 43, 43, 2]));
   // Using filter method
   function usingFilter(nums) {
@@ -13,4 +14,9 @@
     return uniqueNums;
   }
   console.log(usingFilter([23, 2, 23, 24, 2, 25, 65, 43, 43, 2]));
+  let nums = [23, 2, 23, 24, 2, 25, 65, 43, 43, 10];
+  let findDuplicate = nums.filter((value, index) => {
+    return nums.indexOf(value) != index;
+  });
+  console.log("Duplicates are: " + findDuplicate);
 </script>

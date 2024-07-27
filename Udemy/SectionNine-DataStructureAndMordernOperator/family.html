@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Hierarchy</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f8ff;
+        margin: 20px;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        color: #2e8b57;
+        text-shadow: 2px 2px #dcdcdc;
+      }
+      ol,
+      ul {
+        padding-left: 0;
+        list-style-type: none;
+      }
+      li {
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      li:hover {
+        background-color: #f9f9f9;
+        transform: scale(1.02);
+      }
+      .family-member {
+        font-weight: bold;
+        color: #4682b4;
+      }
+      .spouse {
+        font-style: italic;
+        color: #a52a2a;
+        font-weight: bold;
+      }
+      .children {
+        margin-left: 20px;
+        border-left: 2px solid #4682b4;
+        padding-left: 10px;
+      }
+      .sibling {
+        font-weight: bold;
+        color: #b8860b;
+      }
+      .highlight {
+        background-color: #e6f7ff;
+      }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #6c757d;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Family Hierarchy</h1>
+    <ol>
+      <li class="sibling tooltip">
+        Bahadur Yadav
+        <span class="tooltiptext">Grand Grand Father</span>
+        <ul class="children">
+          <li class="sibling tooltip">
+            Rajkaran Yadav
+            <span class="tooltiptext">Brother</span>
+          </li>
+          <li class="sibling tooltip">
+            Ramkaran Yadav
+            <span class="tooltiptext">Brother</span>
+          </li>
+          <li class="sibling tooltip">
+            Umashankar Yadav
+            <span class="tooltiptext">Brother</span>
+          </li>
+          <li class="sibling tooltip highlight">
+            Rambali Yadav
+            <span class="tooltiptext">Grand Father</span>
+            <ul class="children">
+              <li class="family-member tooltip">
+                Sanjay Yadav and <span class="spouse">Vidya Devi</span>
+                <span class="tooltiptext">Son and Wife</span>
+                <ul class="children">
+                  <li>Satyam</li>
+                  <li>Shivam</li>
+                  <li>Sundaram</li>
+                  <li>Shashwatam</li>
+                </ul>
+              </li>
+              <li class="family-member tooltip">
+                Dilip Yadav and <span class="spouse">Usha Devi</span>
+                <span class="tooltiptext">Son and Wife</span>
+                <ul class="children">
+                  <li>Drishti</li>
+                  <li>Naina</li>
+                  <li>Divyam</li>
+                </ul>
+              </li>
+              <li class="family-member tooltip">
+                Pradeep Yadav and <span class="spouse">Nageena Devi</span>
+                <span class="tooltiptext">Son and Wife</span>
+                <ul class="children">
+                  <li>Srishti</li>
+                  <li>Komal</li>
+                  <li>Somdev</li>
+                </ul>
+              </li>
+              <li class="family-member tooltip">
+                <span class="spouse">Mithilesh Yadav And Rekha Yadav</span>
+                <!-- <span class="tooltiptext">Son and Wife</span> -->
+                <ul class="children">
+                  <li>Shwagatam</li>
+                  <li>Shwaram</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="sibling tooltip">
+            Shobanath Yadav
+            <span class="tooltiptext">Brother</span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </body>
+</html>

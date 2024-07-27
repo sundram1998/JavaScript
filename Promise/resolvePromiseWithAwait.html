@@ -1,0 +1,21 @@
+<script>
+  "use strict";
+  let num = [2, 4, 10, 15, 18, 35, 40];
+  // output arr[] = { 10,15,18, 35, 40, 2,4 };
+  //value = 2
+  function moveElementByOne(arr) {
+    let a = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      arr[i - 1] = arr[i];
+    }
+    arr[arr.length - 1] = a;
+    return arr;
+  }
+  function moveElement(value) {
+    for (let i = 0; i < value; i++) {
+      moveElementByOne(num);
+    }
+    return num;
+  }
+  console.log(moveElement(3));
+</script>

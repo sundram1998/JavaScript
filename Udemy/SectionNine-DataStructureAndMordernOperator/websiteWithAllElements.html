@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Website</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .tab {
+        display: none;
+      }
+      .tab-content {
+        margin-top: 10px;
+      }
+      .tablinks {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        display: inline-block;
+      }
+      .tablinks.active {
+        background-color: #ccc;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Sample Website</h1>
+    <p id="para">
+      This is a sample paragraph to demonstrate text on a webpage.
+    </p>
+
+    <h2>Form Elements</h2>
+    <label for="textbox">Textbox:</label>
+    <input type="text" id="textbox" name="textbox" /><br /><br />
+
+    <label for="combobox">Combobox:</label>
+    <select id="combobox" name="combobox">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option></select
+    ><br /><br />
+
+    <label for="dropdown">Dropdown:</label>
+    <select id="dropdown" name="dropdown">
+      <option value="optionA">Option A</option>
+      <option value="optionB">Option B</option>
+      <option value="optionC">Option C</option></select
+    ><br /><br />
+
+    <button type="button" onclick="alert('Button clicked!')">Click Me</button
+    ><br /><br />
+
+    <label for="fileUpload">Upload file:</label>
+    <input type="file" id="fileUpload" name="fileUpload" /><br /><br />
+
+    <h2>Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 6</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Tabs</h2>
+    <div class="tablinks active" onclick="openTab(event, 'Tab1')">Tab 1</div>
+    <div class="tablinks" onclick="openTab(event, 'Tab2')">Tab 2</div>
+    <div class="tablinks" onclick="openTab(event, 'Tab3')">Tab 3</div>
+
+    <div id="Tab1" class="tab tab-content" style="display: block">
+      <h3>Tab 1</h3>
+      <p>Content for Tab 1.</p>
+    </div>
+    <div id="Tab2" class="tab tab-content">
+      <h3>Tab 2</h3>
+      <p>Content for Tab 2.</p>
+    </div>
+    <div id="Tab3" class="tab tab-content">
+      <h3>Tab 3</h3>
+      <p>Content for Tab 3.</p>
+    </div>
+
+    <script>
+      function openTab(event, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>

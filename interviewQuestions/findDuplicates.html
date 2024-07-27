@@ -1,0 +1,92 @@
+<script>
+  "use Strict";
+  //   let arr = [1, 2, 3, 5, 5, 3, 4, 6, 4];
+  //   let duplicates = arr.filter((value, index, arr) => {
+  //     return arr.indexOf(value) != index;
+  //   });
+  //   console.log(duplicates);
+
+  //   //reverse string
+  //   let str = "sundnus";
+  //   console.log(str.split("").reverse().join(""));
+
+  //   // is palindrome
+  //   let isPal = function (str) {
+  //     let reverse = str.split("").reverse().join("");
+  //     return reverse === str;
+  //   };
+  //   console.log(isPal(str));
+
+  //   //length of longest word in string
+  //   let string = "hi how are you going";
+  //   let strArr = string.split(" ");
+  //   let longest = 0;
+  //   for (let i of strArr) {
+  //     if (i.length > longest) {
+  //       longest = i.length;
+  //     }
+  //   }
+  //   console.log(longest);
+  //count the number of vowels in string
+  let vowels = "aeiouAEIOU";
+  let count = 0;
+  function countVowels(str) {
+    for (let i of str) {
+      if (vowels.includes(i)) count++;
+    }
+
+    return count;
+  }
+  console.log(countVowels("sundarame"));
+
+  //Sum of an array
+  let arr = [1, 2, 3, 5, 5, 3, 4, 6, 4];
+  let sum = arr.reduce((acc, value, index, arr) => {
+    return acc + value;
+  });
+  console.log(sum);
+  let largest = 0;
+  for (let i of arr) {
+    if (i > largest) {
+      largest = i;
+    }
+  }
+  console.log(largest);
+  // Number of count in string
+  let string = "hi how are you going";
+  let obj = {};
+  let counts = function () {
+    for (let x of string) {
+      if (obj[x]) {
+        obj[x] += 1;
+      } else {
+        obj[x] = 1;
+      }
+    }
+    return obj;
+  };
+  console.log(counts());
+  let num = 20;
+  console.log(num + "20");
+  console.log(++num);
+  // remove duplicate from array
+  let dups = arr.filter((value, index, arr) => {
+    return arr.indexOf(value) == index;
+  });
+  console.log(dups);
+
+  //find min and max
+  let min = arr[0];
+  let max = 0;
+  for (let i of arr) {
+    if (i > max) {
+      max = i;
+    }
+    if (i < min) {
+      min = i;
+    }
+  }
+  console.log("max " + max + " " + "min " + min);
+  arr.sort();
+  console.log(arr[arr.length - 2]);
+</script>
